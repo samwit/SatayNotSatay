@@ -12,8 +12,11 @@
 		688870131F4191520014F8E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688870111F4191520014F8E3 /* Main.storyboard */; };
 		688870151F4191520014F8E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 688870141F4191520014F8E3 /* Assets.xcassets */; };
 		688870181F4191520014F8E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 688870161F4191520014F8E3 /* LaunchScreen.storyboard */; };
-		688870231F4191520014F8E3 /* SatayNotSatayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688870221F4191520014F8E3 /* SatayNotSatayTests.swift */; };
-		6888702E1F4191520014F8E3 /* SatayNotSatayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888702D1F4191520014F8E3 /* SatayNotSatayUITests.swift */; };
+		6888704B1F43C3990014F8E3 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888704A1F43C3990014F8E3 /* CameraViewController.swift */; };
+		6888704E1F43C8600014F8E3 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888704D1F43C8600014F8E3 /* RoundedShadowView.swift */; };
+		688870601F4528640014F8E3 /* RoundedShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6888705F1F4528640014F8E3 /* RoundedShadowImageView.swift */; };
+		68FB27791F453AB500CCAA77 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FB27781F453AB500CCAA77 /* RoundedShadowButton.swift */; };
+		68FB277B1F45B5FA00CCAA77 /* satay_01.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 68FB277A1F45B50500CCAA77 /* satay_01.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +45,12 @@
 		688870171F4191520014F8E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		688870191F4191520014F8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6888701E1F4191520014F8E3 /* SatayNotSatayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SatayNotSatayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		688870221F4191520014F8E3 /* SatayNotSatayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatayNotSatayTests.swift; sourceTree = "<group>"; };
-		688870241F4191520014F8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		688870291F4191520014F8E3 /* SatayNotSatayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SatayNotSatayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6888702D1F4191520014F8E3 /* SatayNotSatayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatayNotSatayUITests.swift; sourceTree = "<group>"; };
-		6888702F1F4191520014F8E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6888704A1F43C3990014F8E3 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		6888704D1F43C8600014F8E3 /* RoundedShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		6888705F1F4528640014F8E3 /* RoundedShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowImageView.swift; sourceTree = "<group>"; };
+		68FB27781F453AB500CCAA77 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		68FB277A1F45B50500CCAA77 /* satay_01.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = satay_01.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				6888700C1F4191520014F8E3 /* SatayNotSatay */,
-				688870211F4191520014F8E3 /* SatayNotSatayTests */,
-				6888702C1F4191520014F8E3 /* SatayNotSatayUITests */,
 				6888700B1F4191520014F8E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +99,9 @@
 		6888700C1F4191520014F8E3 /* SatayNotSatay */ = {
 			isa = PBXGroup;
 			children = (
+				6888704C1F43C82F0014F8E3 /* Views */,
+				688870491F43C36B0014F8E3 /* Controllers */,
+				6888703B1F4191950014F8E3 /* Resources */,
 				6888700D1F4191520014F8E3 /* AppDelegate.swift */,
 				6888700F1F4191520014F8E3 /* ViewController.swift */,
 				688870111F4191520014F8E3 /* Main.storyboard */,
@@ -107,22 +112,30 @@
 			path = SatayNotSatay;
 			sourceTree = "<group>";
 		};
-		688870211F4191520014F8E3 /* SatayNotSatayTests */ = {
+		6888703B1F4191950014F8E3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				688870221F4191520014F8E3 /* SatayNotSatayTests.swift */,
-				688870241F4191520014F8E3 /* Info.plist */,
+				68FB277A1F45B50500CCAA77 /* satay_01.mlmodel */,
 			);
-			path = SatayNotSatayTests;
+			path = Resources;
 			sourceTree = "<group>";
 		};
-		6888702C1F4191520014F8E3 /* SatayNotSatayUITests */ = {
+		688870491F43C36B0014F8E3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6888702D1F4191520014F8E3 /* SatayNotSatayUITests.swift */,
-				6888702F1F4191520014F8E3 /* Info.plist */,
+				6888704A1F43C3990014F8E3 /* CameraViewController.swift */,
 			);
-			path = SatayNotSatayUITests;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6888704C1F43C82F0014F8E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6888704D1F43C8600014F8E3 /* RoundedShadowView.swift */,
+				6888705F1F4528640014F8E3 /* RoundedShadowImageView.swift */,
+				68FB27781F453AB500CCAA77 /* RoundedShadowButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +270,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				688870101F4191520014F8E3 /* ViewController.swift in Sources */,
+				6888704B1F43C3990014F8E3 /* CameraViewController.swift in Sources */,
+				68FB277B1F45B5FA00CCAA77 /* satay_01.mlmodel in Sources */,
+				6888704E1F43C8600014F8E3 /* RoundedShadowView.swift in Sources */,
+				688870601F4528640014F8E3 /* RoundedShadowImageView.swift in Sources */,
 				6888700E1F4191520014F8E3 /* AppDelegate.swift in Sources */,
+				68FB27791F453AB500CCAA77 /* RoundedShadowButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				688870231F4191520014F8E3 /* SatayNotSatayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +290,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6888702E1F4191520014F8E3 /* SatayNotSatayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28YWGUN639;
 				INFOPLIST_FILE = SatayNotSatay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.familyplay.SatayNotSatay;
@@ -436,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 28YWGUN639;
 				INFOPLIST_FILE = SatayNotSatay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.familyplay.SatayNotSatay;

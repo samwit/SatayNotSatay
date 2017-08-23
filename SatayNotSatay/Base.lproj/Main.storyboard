@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="SatayNotSatay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6V-ZP-2ef" userLabel="CamView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wjN-GA-SGM" customClass="RoundedShadowImageView" customModule="SatayNotSatay" customModuleProvider="target">
+                                <rect key="frame" x="265" y="477" width="90" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="0VA-VR-wSq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="35l-Av-koP"/>
+                                    <constraint firstAttribute="height" constant="160" id="3j7-pl-YlA"/>
+                                    <constraint firstAttribute="width" constant="90" id="d6m-Tp-hHv"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="lFT-qF-geN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="160" id="sxR-aH-JK1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="vx0-gj-Zna"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="90" id="yBp-sq-gdm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="not-red-rec" translatesAutoresizingMaskIntoConstraints="NO" id="deN-pi-kaG" customClass="RoundedShadowImageView" customModule="SatayNotSatay" customModuleProvider="target">
+                                <rect key="frame" x="30" y="50" width="315" height="65"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yad-LM-pIK" customClass="RoundedShadowButton" customModule="SatayNotSatay" customModuleProvider="target">
+                                <rect key="frame" x="20" y="597" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9fh-2y-aCm"/>
+                                    <constraint firstAttribute="height" constant="40" id="Doo-OO-G3M"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="YYm-qX-FkI"/>
+                                    <constraint firstAttribute="width" constant="100" id="pkT-Uy-lUQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Voice On">
+                                    <color key="titleColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q69-IF-m0d">
+                                <rect key="frame" x="156" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="7sS-AT-o7K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wjN-GA-SGM" secondAttribute="trailing" constant="20" id="BAh-4N-AKd"/>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="CP2-qO-DgB"/>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Hdu-Tj-Soz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deN-pi-kaG" secondAttribute="trailing" constant="30" id="IUE-vj-QgO"/>
+                            <constraint firstItem="V6V-ZP-2ef" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KcS-J8-FJk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yad-LM-pIK" secondAttribute="bottom" constant="30" id="PBQ-uT-jUj"/>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="RPw-Tk-Nvy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deN-pi-kaG" secondAttribute="trailing" constant="30" id="XF3-gD-NfG"/>
+                            <constraint firstItem="Yad-LM-pIK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aBN-vo-0SB"/>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="c87-eH-W00"/>
+                            <constraint firstItem="deN-pi-kaG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hIe-36-LCh"/>
+                            <constraint firstItem="V6V-ZP-2ef" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kyu-c6-Uh4"/>
+                            <constraint firstItem="V6V-ZP-2ef" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lFO-AA-vYb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wjN-GA-SGM" secondAttribute="bottom" constant="30" id="wS2-pM-OUE"/>
+                            <constraint firstItem="V6V-ZP-2ef" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="wbF-k5-oV4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="deN-pi-kaG"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="cameraView" destination="V6V-ZP-2ef" id="dHH-1t-5PP"/>
+                        <outlet property="satayResultImage" destination="deN-pi-kaG" id="Icq-wW-ccl"/>
+                        <outlet property="spinner" destination="Q69-IF-m0d" id="NMH-G2-jb6"/>
+                        <outlet property="tempImage" destination="wjN-GA-SGM" id="Sct-Rp-due"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="not-red-rec" width="320" height="65"/>
+    </resources>
 </document>
