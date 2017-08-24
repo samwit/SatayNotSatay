@@ -135,17 +135,13 @@ class CameraViewController: UIViewController {
         
         for classification in results {
             if classification.confidence < 0.97 {
-                let unknownObjectMessage = "It's Not Satay"//"I'm not sure what this is. Please try again."
+                let unknownObjectMessage = "It's Not Satay"
                 notSatay()
-                //self.classLbl.text = unknownObjectMessage
                 synthesizeSpeech(fromString: unknownObjectMessage)
-                //self.confidenceLbl.text = ""
                 break
             } else {
                 let identification = classification.identifier
                 let confidence = Int(classification.confidence * 100)
-                //self.classLbl.text = identification
-                //self.confidenceLbl.text = "CONFIDENCE: \(confidence)%"
                 print(identification)
                 if identification == "satay" {
                     itsSatay()
@@ -200,8 +196,6 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
             
             do {
                 // Instantiate the CoreML Model
-                //let model = try VNCoreMLModel(for: SqueezeNet().model)
-                //let model = try VNCoreMLModel(for: Inceptionv3().model)
                 let model = try VNCoreMLModel(for: satay_01().model)
                 let request = VNCoreMLRequest(model: model, completionHandler: resultsMethod)
                 let handler = VNImageRequestHandler(data: photoData!)
